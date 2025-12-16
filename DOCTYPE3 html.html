@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n-key="page.title">Ethical AI Research</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#" data-i18n-key="header.title">
+            <i class="bi bi-robot me-2"></i>Ethical AI
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#hero" data-i18n-key="nav.home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#issues" data-i18n-key="nav.issues">Key Issues</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#content-grid" data-i18n-key="nav.frameworks">Frameworks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq" data-i18n-key="nav.faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-warning fw-semibold" href="landing.html" data-i18n-key="nav.download">
+                    <i class="bi bi-download me-1"></i>Free Report
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact" data-i18n-key="nav.contact">Contact</a>
+            </li>
+            <li class="nav-item d-flex align-items-center ms-lg-3">
+                <div id="language-switcher" class="text-white small">
+                    <label for="langSelect" class="form-label mb-0 me-2" data-i18n-key="ui.language">Language:</label>
+                    <select id="langSelect" class="form-select form-select-sm d-inline-block w-auto">
+                      <option value="en">English</option>
+                      <option value="pl">Polski</option>
+                      <option value="de">Deutsch</option>
+                      <option value="es">Español</option>
+                      <option value="ru">Русский</option>
+                      <option value="fr">Français</option>
+                    </select>
+                  </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <main>
+      <section id="hero" class="hero-section bg-dark text-white text-center py-5">
+        <div class="container p-5">
+  <h1 class="display-3 fw-bold mb-3" data-i18n-key="hero.title">
+    Pioneering Responsible AI Development
+  </h1>
+
+  <p class="lead mb-4" data-i18n-key="hero.subtitle">
+    Guiding the future of technology with ethics, transparency, and inclusion at its core.
+  </p>
+
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+    <a href="#issues" class="btn btn-primary btn-lg custom-btn" data-i18n-key="hero.cta">
+      <i class="bi bi-lightbulb-fill me-2"></i>Explore Key Principles
+    </a>
+
+    <!-- NOWY PRZYCISK DO LANDING PAGE -->
+    <a href="landing.html" class="btn btn-outline-light btn-lg" data-i18n-key="hero.download">
+      <i class="bi bi-download me-2"></i>Download Free AI Ethics Report
+    </a>
+  </div>
+</div>
+      </section>
+
+      <section id="issues" class="container my-5">
+        <h2 data-i18n-key="section.issues" class="text-center mb-4">Key Ethical Issues</h2>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm p-2">
+                    <div class="card-body">
+                        <i class="bi bi-shield-lock-fill text-primary display-6 mb-3"></i>
+                        <h5 class="card-title fw-bold" data-i18n-key="issue.data_privacy_title">Data Responsibility & Privacy:</h5>
+                        <p class="card-text small" data-i18n-key="issue.data_privacy_text">
+                            The use of large datasets means companies must protect personal data and avoid surveillance. Source: IBM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm p-2">
+                    <div class="card-body">
+                        <i class="bi bi-people-fill text-danger display-6 mb-3"></i>
+                        <h5 class="card-title fw-bold" data-i18n-key="issue.fairness_title">Fairness & Bias:</h5>
+                        <p class="card-text small" data-i18n-key="issue.fairness_text">
+                            AI systems trained on biased data can perpetuate discrimination. Source: IBM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm p-2">
+                    <div class="card-body">
+                        <i class="bi bi-eye-fill text-warning display-6 mb-3"></i>
+                        <h5 class="card-title fw-bold" data-i18n-key="issue.transparency_title">Explainability & Transparency:</h5>
+                        <p class="card-text small" data-i18n-key="issue.transparency_text">
+                            AI models must be understandable to stakeholders to build trust. Source: IBM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm p-2">
+                    <div class="card-body">
+                        <i class="bi bi-life-preserver text-success display-6 mb-3"></i>
+                        <h5 class="card-title fw-bold" data-i18n-key="issue.robustness_title">Robustness & Accountability:</h5>
+                        <p class="card-text small" data-i18n-key="issue.robustness_text">
+                            AI must be designed to withstand adversarial use and clearly show who is responsible when things goes wrong. Source: IBM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm p-2">
+                    <div class="card-body">
+                        <i class="bi bi-globe display-6 mb-3" style="color: purple;"></i>
+                        <h5 class="card-title fw-bold" data-i18n-key="issue.societal_title">Societal Impact & Inclusion:</h5>
+                        <p class="card-text small" data-i18n-key="issue.societal_text">
+                            AI deployment influences jobs, equality, and social values. Source: IBM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm p-2">
+                    <div class="card-body">
+                        <i class="bi bi-bank2 text-info display-6 mb-3"></i>
+                        <h5 class="card-title fw-bold" data-i18n-key="frameworks.title">Governance & Oversight:</h5>
+                        <p class="card-text small" data-i18n-key="frameworks.intro">
+                            Effective AI ethics requires governance, clear roles and responsibilities, and corporate values integrated into the AI lifecycle. Source: IBM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="content-grid" class="container my-5">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 data-i18n-key="section.frameworks" class="mb-3">Frameworks & Governance</h2>
+                <p data-i18n-key="frameworks.intro">
+                    Effective AI ethics requires governance, clear roles and responsibilities, and corporate values integrated into the AI lifecycle. Source: IBM.
+                </p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" data-i18n-key="frameworks.li1"><i class="bi bi-person-check-fill me-2 text-primary"></i>Define roles and educate stakeholders in the AI lifecycle.</li>
+                    <li class="list-group-item" data-i18n-key="frameworks.li2"><i class="bi bi-gear-fill me-2 text-primary"></i>Establish processes for managing, monitoring, and communicating about AI risks.</li>
+                    <li class="list-group-item" data-i18n-key="frameworks.li3"><i class="bi bi-lightbulb-fill me-2 text-primary"></i>Apply principles such as explainability, fairness, privacy, and robustness. Source: IBM.</li>
+                </ul>
+            </div>
+
+            <div class="col-lg-6">
+                <h2 data-i18n-key="section.implementation" class="mb-3">Implementation Strategies</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" data-i18n-key="impl.li1"><i class="bi bi-puzzle-fill me-2 text-success"></i>Embed diversity in data and audits to mitigate bias.</li>
+                    <li class="list-group-item" data-i18n-key="impl.li2"><i class="bi bi-file-earmark-text-fill me-2 text-success"></i>Use transparent models and provide documentation for how AI makes decisions.</li>
+                    <li class="list-group-item" data-i18n-key="impl.li3"><i class="bi bi-people-fill me-2 text-success"></i>Build governance boards to oversee AI ethics practices.</li>
+                    <li class="list-group-item" data-i18n-key="impl.li4"><i class="bi bi-key-fill me-2 text-success"></i>Protect consumer privacy and give them control over their data.</li>
+                    <li class="list-group-item" data-i18n-key="impl.li5"><i class="bi bi-person-fill me-2 text-success"></i>Support human-in-the-loop systems to ensure oversight of critical decisions.</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+
+      <section id="faq" class="container my-5">
+        <h2 class="text-center mb-4" data-i18n-key="section.faq_title">Frequently Asked Questions</h2>
+        
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-i18n-key="faq.q1_title">
+                        What is AI Explainability (XAI)?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-i18n-key="faq.a1_text">
+                        XAI refers to methods and techniques that allow human users to understand, trust, and effectively manage the outputs of artificial intelligence. It addresses the "black box" problem of complex AI models.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-i18n-key="faq.q2_title">
+                        How does bias enter an AI system?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-i18n-key="faq.a2_text">
+                        Bias typically enters through the training data, which may reflect societal prejudices, or through the design of the AI system itself, if it overlooks certain demographic groups.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item shadow-sm">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-i18n-key="faq.q3_title">
+                        What are the main societal impacts of AI?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body" data-i18n-key="faq.a3_text">
+                        Impacts include changes in the job market, shifts in economic inequality, effects on democratic processes, and potential challenges to human autonomy and social values.
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      <section id="challenges" class="container my-5">
+        <h2 data-i18n-key="section.challenges" class="text-center mb-4">Challenges</h2>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+          <span class="badge bg-secondary p-3">
+              <i class="bi bi-speedometer2 me-1"></i>
+              Innovation vs. Regulation
+          </span>
+          <span class="badge bg-secondary p-3">
+              <i class="bi bi-graph-up me-1"></i>
+              Accuracy vs. Interpretability
+          </span>
+          <span class="badge bg-secondary p-3">
+              <i class="bi bi-geo-alt-fill me-1"></i>
+              Global Standards Variation
+          </span>
+          <span class="badge bg-secondary p-3">
+              <i class="bi bi-clipboard-data-fill me-1"></i>
+              Complex Measurement
+          </span>
+        </div>
+      </section>
+
+
+      <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-i18n-key="contact.title">Get Involved</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <p class="text-center mb-4" data-i18n-key="contact.subtitle">
+                        Do you have questions or want to contribute to our research? Use the form below.
+                    </p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold" data-i18n-key="contact.name_label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold" data-i18n-key="contact.email_label">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold" data-i18n-key="contact.message_label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="subscribeCheck">
+                            <label class="form-check-label" for="subscribeCheck" data-i18n-key="contact.checkbox_label">Subscribe to our newsletter</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary custom-btn-submit" data-i18n-key="contact.submit_btn">
+                                <i class="bi bi-send-fill me-2"></i>Submit Inquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="citations" class="container my-5">
+        <aside class="text-muted small">
+          IBM. (2024). What is AI ethics? Retrieved from
+          <a href="https://www.ibm.com/think/topics/ai-ethics"
+            >https://www.ibm.com/think/topics/ai-ethics</a
+          >
+        </aside>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white p-4">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="fw-bold">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#issues" class="text-white-50">Issues</a></li>
+              <li><a href="#content-grid" class="text-white-50">Frameworks</a></li>
+              <li><a href="#faq" class="text-white-50">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h5 class="fw-bold">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-envelope-fill me-2"></i>info@ethicalai.org</li>
+              <li><i class="bi bi-telephone-fill me-2"></i>+1 555-AI-ETHS</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5 class="fw-bold">Follow Us</h5>
+            <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+            <a href="#" class="text-white mx-2"><i class="bi bi-github fs-4"></i></a>
+          </div>
+        </div>
+        <hr class="text-white-50 my-3">
+        <p class="mb-0 small text-white-50" data-i18n-key="footer.text">
+            &copy; 2025 Ethical AI Research - based on IBM insights
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+        const MESSAGES = {
+            en: {
+                "ui.language": "Language:",
+                "page.title": "Ethical AI Research",
+                "header.title": "Ethical AI",
+                "nav.home": "Home", // Nowy element nawigacji
+                "nav.issues": "Key Issues",
+                "nav.frameworks": "Frameworks",
+                "nav.implementation": "Implementation",
+                "nav.challenges": "Challenges",
+                "nav.summary": "Summary",
+                "nav.faq": "FAQ", // Nowy element nawigacji
+                "nav.download": "Free Report",
+                "hero.download": "Download Free AI Ethics Report"
+                "nav.contact": "Contact", // Nowy element nawigacji
+                "hero.title": "Pioneering Responsible AI Development", // Nowy element
+                "hero.subtitle": "Guiding the future of technology with ethics, transparency, and inclusion at its core.", // Nowy element
+                "hero.cta": "Explore Key Principles", // Nowy element
+                "section.faq_title": "Frequently Asked Questions", // Nowy element
+                "faq.q1_title": "What is AI Explainability (XAI)?", // Nowy element
+                "faq.a1_text": "XAI refers to methods and techniques that allow human users to understand, trust, and effectively manage the outputs of artificial intelligence. It addresses the 'black box' problem of complex AI models.", // Nowy element
+                "faq.q2_title": "How does bias enter an AI system?", // Nowy element
+                "faq.a2_text": "Bias typically enters through the training data, which may reflect societal prejudices, or through the design of the AI system itself, if it overlooks certain demographic groups.", // Nowy element
+                "faq.q3_title": "What are the main societal impacts of AI?", // Nowy element
+                "faq.a3_text": "Impacts include changes in the job market, shifts in economic inequality, effects on democratic processes, and potential challenges to human autonomy and social values.", // Nowy element
+                "contact.title": "Get Involved", // Nowy element
+                "contact.subtitle": "Do you have questions or want to contribute to our research? Use the form below.", // Nowy element
+                "contact.name_label": "Name", // Nowy element
+                "contact.email_label": "Email address", // Nowy element
+                "contact.message_label": "Message", // Nowy element
+                "contact.checkbox_label": "Subscribe to our newsletter", // Nowy element
+                "contact.submit_btn": "Submit Inquiry", // Nowy element
+                "section.introduction": "Introduction",
+                "intro.text": "Ethics is a set of moral principles which help us discern between right and wrong. AI ethics is a multidisciplinary field that studies how to optimize the beneficial impact of artificial intelligence (AI) while reducing risks and adverse outcomes. Source: IBM.",
+                "section.issues": "Key Ethical Issues",
+                "issue.data_privacy_title": "Data Responsibility & Privacy:",
+                "issue.data_privacy_text": "The use of large datasets means companies must protect personal data and avoid surveillance. Source: IBM.",
+                "issue.fairness_title": "Fairness & Bias:",
+                "issue.fairness_text": "AI systems trained on biased data can perpetuate discrimination. Source: IBM.",
+                "issue.transparency_title": "Explainability & Transparency:",
+                "issue.transparency_text": "AI models must be understandable to stakeholders to build trust. Source: IBM.",
+                "issue.robustness_title": "Robustness & Accountability:",
+                "issue.robustness_text": "AI must be designed to withstand adversarial use and clearly show who is responsible when things goes wrong. Source: IBM.",
+                "issue.societal_title": "Societal Impact & Inclusion:",
+                "issue.societal_text": "AI deployment influences jobs, equality, and social values. Source: IBM.",
+                "section.frameworks": "Frameworks & Governance",
+                "frameworks.intro": "Effective AI ethics requires governance, clear roles and responsibilities, and corporate values integrated into the AI lifecycle. Source: IBM.",
+                "frameworks.li1": "Define roles and educate stakeholders in the AI lifecycle.",
+                "frameworks.li2": "Establish processes for managing, monitoring, and communicating about AI risks.",
+                "frameworks.li3": "Apply principles such as explainability, fairness, privacy, and robustness. Source: IBM.",
+                "frameworks.title": "Governance & Oversight:", // Używany w karcie
+                "section.implementation": "Implementation Strategies",
+                "impl.li1": "Embed diversity in data and audits to mitigate bias.",
+                "impl.li2": "Use transparent models and provide documentation for how AI makes decisions.",
+                "impl.li3": "Build governance boards to oversee AI ethics practices.",
+                "impl.li4": "Protect consumer privacy and give them control over their data.",
+                "impl.li5": "Support human-in-the-loop systems to ensure oversight of critical decisions.",
+                "section.challenges": "Challenges",
+                "challenges.li1": "Innovation is outpacing regulation, leading to gaps in oversight. Source: IBM.",
+                "challenges.li2": "Balancing accuracy and interpretability remains difficult.",
+                "challenges.li3": "Global ethical standards vary, complicating implementation.",
+                "challenges.li4": "Measuring fairness, accountability and social impact is complex.",
+                "section.summary": "Summary",
+                "summary.link": "Download summary",
+                "footer.text": "2025 Ethical AI Research - based on IBM insights"
+            },
+            pl: {
+                "ui.language": "Język:",
+                "page.title": "Badania nad Etyką AI",
+                "header.title": "Etyka Sztucznej Inteligencji",
+                "nav.home": "Główna",
+                "nav.issues": "Kluczowe Zagadnienia",
+                "nav.frameworks": "Ramy i Zarządzanie",
+                "nav.implementation": "Implementacja",
+                "nav.challenges": "Wyzwania",
+                "nav.summary": "Podsumowanie",
+                "nav.download": "Darmowy Raport",
+                "hero.download": "Pobierz Darmowy Raport o Etyce AI",
+                "nav.faq": "FAQ",
+                "nav.contact": "Kontakt",
+                "hero.title": "Pionierski Rozwój Odpowiedzialnej Sztucznej Inteligencji",
+                "hero.subtitle": "Kierowanie przyszłością technologii z etyką, przejrzystością i włączeniem w centrum.",
+                "hero.cta": "Poznaj Kluczowe Zasady",
+                "section.faq_title": "Często Zadawane Pytania",
+                "faq.q1_title": "Czym jest Wyjaśnialność AI (XAI)?",
+                "faq.a1_text": "XAI odnosi się do metod i technik, które pozwalają użytkownikom zrozumieć, ufać i skutecznie zarządzać wynikami sztucznej inteligencji. Odnosi się to do problemu 'czarnej skrzynki' złożonych modeli AI.",
+                "faq.q2_title": "Jak stronniczość dostaje się do systemu AI?",
+                "faq.a2_text": "Stronniczość zazwyczaj pojawia się poprzez dane treningowe, które mogą odzwierciedlać uprzedzenia społeczne, lub poprzez sam projekt systemu AI, jeśli pomija on pewne grupy demograficzne.",
+                "faq.q3_title": "Jakie są główne społeczne skutki AI?",
+                "faq.a3_text": "Skutki obejmują zmiany na rynku pracy, zmiany w nierównościach ekonomicznych, wpływ na procesy demokratyczne oraz potencjalne wyzwania dla autonomii człowieka i wartości społecznych.",
+                "contact.title": "Zaangażuj się",
+                "contact.subtitle": "Masz pytania lub chcesz przyczynić się do naszych badań? Skorzystaj z poniższego formularza.",
+                "contact.name_label": "Imię",
+                "contact.email_label": "Adres email",
+                "contact.message_label": "Wiadomość",
+                "contact.checkbox_label": "Zapisz się do naszego newslettera",
+                "contact.submit_btn": "Wyślij Zapytanie",
+                "section.introduction": "Wprowadzenie",
+                "intro.text": "Etyka to zbiór zasad moralnych, które pomagają nam rozróżniać dobro od zła. Etyka AI to multidyscyplinarna dziedzina, która bada, jak zoptymalizować korzystny wpływ sztucznej inteligencji (AI), jednocześnie minimalizując ryzyko i niekorzystne skutki. Źródło: IBM.",
+                "section.issues": "Kluczowe Kwestie Etyczne",
+                "issue.data_privacy_title": "Odpowiedzialność za Dane i Prywatność:",
+                "issue.data_privacy_text": "Wykorzystanie dużych zbiorów danych oznacza, że firmy muszą chronić dane osobowe i unikać nadzoru. Źródło: IBM.",
+                "issue.fairness_title": "Sprawiedliwość i Tendencyjność:",
+                "issue.fairness_text": "Systemy AI trenowane na stronniczych danych mogą utrwalać dyskryminację. Źródło: IBM.",
+                "issue.transparency_title": "Wyjaśnialność i Przejrzystość:",
+                "issue.transparency_text": "Modele AI muszą być zrozumiałe dla interesariuszy, aby budować zaufanie. Źródło: IBM.",
+                "issue.robustness_title": "Solidność i Rozliczalność:",
+                "issue.robustness_text": "AI musi być zaprojektowana tak, aby wytrzymać wrogie użycie i jasno wskazywać, kto jest odpowiedzialny, gdy coś pójdzie nie tak. Źródło: IBM.",
+                "issue.societal_title": "Wpływ Społeczny i Integracja:",
+                "issue.societal_text": "Wdrożenie AI wpływa na miejsca pracy, równość i wartości społeczne. Źródło: IBM.",
+                "section.frameworks": "Ramy i Zarządzanie",
+                "frameworks.intro": "Skuteczna etyka AI wymaga zarządzania, jasnych ról i obowiązków oraz wartości korporacyjnych zintegrowanych z cyklem życia AI. Źródło: IBM.",
+                "frameworks.li1": "Zdefiniuj role i edukuj interesariuszy w cyklu życia AI.",
+                "frameworks.li2": "Ustanawiaj procesy zarządzania, monitorowania i komunikowania ryzyka AI.",
+                "frameworks.li3": "Stosuj zasady takie jak wyjaśnialność, sprawiedliwość, prywatność i solidność. Źródło: IBM.",
+                "frameworks.title": "Zarządzanie i Nadzór:",
+                "section.implementation": "Strategie Wdrożenia",
+                "impl.li1": "Osadzaj różnorodność w danych i audytach, aby łagodzić stronniczość.",
+                "impl.li2": "Używaj przezroczystych modeli i dostarczaj dokumentację dotyczącą podejmowania decyzji przez AI.",
+                "impl.li3": "Twórz rady nadzorcze do monitorowania praktyk etycznych AI.",
+                "impl.li4": "Chroń prywatność konsumentów i daj im kontrolę nad ich danymi.",
+                "impl.li5": "Wspieraj systemy 'człowiek w pętli', aby zapewnić nadzór nad krytycznymi decyzjami.",
+                "section.challenges": "Wyzwania",
+                "challenges.li1": "Innowacje wyprzedzają regulacje, prowadząc do luk w nadzorze. Źródło: IBM.",
+                "challenges.li2": "Utrzymanie równowagi między dokładnością a interpretowalnością pozostaje trudne.",
+                "challenges.li3": "Globalne standardy etyczne są zróżnicowane, co komplikuje wdrożenie.",
+                "challenges.li4": "Mierzenie sprawiedliwości, rozliczalności i wpływu społecznego jest złożone.",
+                "section.summary": "Podsumowanie",
+                "summary.link": "Pobierz podsumowanie",
+                "footer.text": "2025 Badania Etyki AI - na podstawie danych IBM"
+            },
+            // =========================================================
+            // UZUPEŁNIONE JĘZYKI
+            // =========================================================
+            de: {
+                "ui.language": "Sprache:",
+                "page.title": "Ethische KI-Forschung",
+                "header.title": "Ethische KI",
+                "nav.home": "Startseite",
+                "nav.issues": "Schlüsselthemen",
+                "nav.frameworks": "Frameworks",
+                "nav.implementation": "Implementierung",
+                "nav.challenges": "Herausforderungen",
+                "nav.download": "Kostenloser Bericht",
+                "hero.download": "Kostenlosen KI-Ethik-Bericht herunterladen",
+                "nav.summary": "Zusammenfassung",
+                "nav.faq": "FAQ",
+                "nav.contact": "Kontakt",
+                "hero.title": "Wegweisende Entwicklung verantwortungsvoller KI",
+                "hero.subtitle": "Die Zukunft der Technologie mit Ethik, Transparenz und Inklusion im Kern gestalten.",
+                "hero.cta": "Schlüsselprinzipien entdecken",
+                "section.faq_title": "Häufig gestellte Fragen",
+                "faq.q1_title": "Was ist Erklärbare KI (XAI)?",
+                "faq.a1_text": "XAI bezieht sich auf Methoden und Techniken, die menschlichen Benutzern ermöglichen, die Ergebnisse künstlicher Intelligenz zu verstehen, ihnen zu vertrauen und sie effektiv zu verwalten. Es befasst sich mit dem 'Black-Box'-Problem komplexer KI-Modelle.",
+                "faq.q2_title": "Wie gelangt Voreingenommenheit in ein KI-System?",
+                "faq.a2_text": "Voreingenommenheit gelangt typischerweise über die Trainingsdaten in das System, die gesellschaftliche Vorurteile widerspiegeln können, oder durch das Design des KI-Systems selbst, wenn es bestimmte demografische Gruppen übergeht.",
+                "faq.q3_title": "Welche sind die wichtigsten gesellschaftlichen Auswirkungen von KI?",
+                "faq.a3_text": "Die Auswirkungen umfassen Veränderungen auf dem Arbeitsmarkt, Verschiebungen in der wirtschaftlichen Ungleichheit, Auswirkungen auf demokratische Prozesse und potenzielle Herausforderungen für die menschliche Autonomie und soziale Werte.",
+                "contact.title": "Mitmachen",
+                "contact.subtitle": "Haben Sie Fragen oder möchten Sie zu unserer Forschung beitragen? Nutzen Sie das untenstehende Formular.",
+                "contact.name_label": "Name",
+                "contact.email_label": "E-Mail-Adresse",
+                "contact.message_label": "Nachricht",
+                "contact.checkbox_label": "Unseren Newsletter abonnieren",
+                "contact.submit_btn": "Anfrage senden",
+                "section.introduction": "Einleitung",
+                "intro.text": "Ethik ist eine Reihe moralischer Prinzipien, die uns helfen, zwischen richtig und falsch zu unterscheiden. KI-Ethik ist ein multidisziplinäres Feld, das untersucht, wie der positive Einfluss von Künstlicher Intelligenz (KI) optimiert und Risiken reduziert werden können. Quelle: IBM.",
+                "section.issues": "Wichtige Ethische Fragen",
+                "issue.data_privacy_title": "Datenverantwortung & Datenschutz:",
+                "issue.data_privacy_text": "Die Verwendung großer Datensätze bedeutet, dass Unternehmen personenbezogene Daten schützen und Überwachung vermeiden müssen. Quelle: IBM.", 
+                "issue.fairness_title": "Fairness & Voreingenommenheit:",
+                "issue.fairness_text": "Auf voreingenommenen Daten trainierte KI-Systeme können Diskriminierung aufrechterhalten. Quelle: IBM.", 
+                "issue.transparency_title": "Erklärbarkeit & Transparenz:",
+                "issue.transparency_text": "KI-Modelle müssen für Stakeholder verständlich sein, um Vertrauen aufzubauen. Quelle: IBM.", 
+                "issue.robustness_title": "Robustheit & Rechenschaftspflicht:",
+                "issue.robustness_text": "KI muss so konzipiert sein, dass sie missbräuchlicher Nutzung standhält und klar zeigt, wer verantwortlich ist, wenn etwas schiefgeht. Quelle: IBM.", 
+                "issue.societal_title": "Gesellschaftlicher Einfluss & Inklusion:",
+                "issue.societal_text": "Der Einsatz von KI beeinflusst Arbeitsplätze, Gleichheit und soziale Werte. Quelle: IBM.", 
+                "section.frameworks": "Frameworks & Governance",
+                "frameworks.intro": "Effektive KI-Ethik erfordert Governance, klare Rollen und Verantwortlichkeiten sowie in den KI-Lebenszyklus integrierte Unternehmenswerte. Quelle: IBM.", 
+                "frameworks.li1": "Rollen definieren und Stakeholder im KI-Lebenszyklus schulen.", 
+                "frameworks.li2": "Prozesse für das Management, die Überwachung und die Kommunikation über KI-Risiken etablieren.", 
+                "frameworks.li3": "Prinzipien wie Erklärbarkeit, Fairness, Datenschutz und Robustheit anwenden. Quelle: IBM.", 
+                "frameworks.title": "Governance & Aufsicht:",
+                "section.implementation": "Implementierungsstrategien",
+                "impl.li1": "Diversität in Daten und Audits einbetten, um Voreingenommenheit zu mindern.", 
+                "impl.li2": "Transparente Modelle verwenden und Dokumentation zur Entscheidungsfindung durch KI bereitstellen.", 
+                "impl.li3": "Governance-Ausschüsse einrichten, um KI-Ethikpraktiken zu überwachen.", 
+                "impl.li4": "Verbraucherdatenschutz gewährleisten und ihnen Kontrolle über ihre Daten geben.", 
+                "impl.li5": "Systeme 'Human-in-the-Loop' unterstützen, um die Aufsicht über kritische Entscheidungen zu gewährleisten.", 
+                "section.challenges": "Herausforderungen",
+                "challenges.li1": "Innovation überholt die Regulierung, was zu Aufsichtslücken führt. Quelle: IBM.", 
+                "challenges.li2": "Das Gleichgewicht zwischen Genauigkeit und Interpretierbarkeit bleibt schwierig.", 
+                "challenges.li3": "Globale ethische Standards variieren, was die Implementierung erschwert.", 
+                "challenges.li4": "Die Messung von Fairness, Rechenschaftspflicht und gesellschaftlichem Einfluss ist komplex.", 
+                "section.summary": "Zusammenfassung",
+                "summary.link": "Zusammenfassung herunterladen",
+                "footer.text": "2025 Ethische KI-Forschung - basierend auf IBM-Erkenntnissen"
+            },
+            es: {
+                "ui.language": "Idioma:",
+                "page.title": "Investigación sobre IA Ética",
+                "header.title": "IA Ética",
+                "nav.home": "Inicio",
+                "nav.issues": "Temas Clave",
+                "nav.frameworks": "Marcos",
+                "nav.implementation": "Implementación",
+                "nav.challenges": "Desafíos",
+                "nav.download": "Informe Gratis",
+                "hero.download": "Descargar Informe Gratuito de Ética en IA",
+                "nav.summary": "Resumen",
+                "nav.faq": "FAQ",
+                "nav.contact": "Contacto",
+                "hero.title": "Pioneros en el Desarrollo Responsable de la IA",
+                "hero.subtitle": "Guiando el futuro de la tecnología con la ética, la transparencia y la inclusión en su núcleo.",
+                "hero.cta": "Explorar Principios Clave",
+                "section.faq_title": "Preguntas Frecuentes",
+                "faq.q1_title": "¿Qué es la Explicabilidad de la IA (XAI)?",
+                "faq.a1_text": "XAI se refiere a métodos y técnicas que permiten a los usuarios humanos comprender, confiar y gestionar eficazmente los resultados de la inteligencia artificial. Aborda el problema de la 'caja negra' de los modelos complejos de IA.",
+                "faq.q2_title": "¿Cómo entra el sesgo en un sistema de IA?",
+                "faq.a2_text": "El sesgo entra típicamente a través de los datos de entrenamiento, que pueden reflejar prejuicios sociales, o a través del diseño del propio sistema de IA, si pasa por alto a ciertos grupos demográficos.",
+                "faq.q3_title": "¿Cuáles son los principales impactos sociales de la IA?",
+                "faq.a3_text": "Los impactos incluyen cambios en el mercado laboral, variaciones en la desigualdad económica, efectos en los procesos democráticos y posibles desafíos a la autonomía humana y los valores sociales.",
+                "contact.title": "Involúcrate",
+                "contact.subtitle": "¿Tiene preguntas o quiere contribuir a nuestra investigación? Utilice el siguiente formulario.",
+                "contact.name_label": "Nombre",
+                "contact.email_label": "Dirección de correo electrónico",
+                "contact.message_label": "Mensaje",
+                "contact.checkbox_label": "Suscribirse a nuestro boletín",
+                "contact.submit_btn": "Enviar Consulta",
+                "section.introduction": "Introducción",
+                "intro.text": "La ética es un conjunto de principios morales que nos ayudan a discernir entre lo correcto y lo incorrecto. La ética de la IA es un campo multidisciplinario que estudia cómo optimizar el impacto beneficioso de la inteligencia artificial (IA) mientras se reducen los riesgos y los resultados adversos. Fuente: IBM.",
+                "section.issues": "Cuestiones Éticas Clave",
+                "issue.data_privacy_title": "Responsabilidad de los Datos y Privacidad:",
+                "issue.data_privacy_text": "El uso de grandes conjuntos de datos significa que las empresas deben proteger los datos personales y evitar la vigilancia. Fuente: IBM.", 
+                "issue.fairness_title": "Equidad y Sesgo:",
+                "issue.fairness_text": "Los sistemas de IA entrenados con datos sesgados pueden perpetuar la discriminación. Fuente: IBM.", 
+                "issue.transparency_title": "Explicabilidad y Transparencia:",
+                "issue.transparency_text": "Los modelos de IA deben ser comprensibles para las partes interesadas para generar confianza. Fuente: IBM.", 
+                "issue.robustness_title": "Robustez y Responsabilidad:",
+                "issue.robustness_text": "La IA debe estar diseñada para resistir el uso adversario y mostrar claramente quién es responsable cuando las cosas salen mal. Fuente: IBM.", 
+                "issue.societal_title": "Impacto Social e Inclusión:",
+                "issue.societal_text": "El despliegue de la IA influye en los empleos, la igualdad y los valores sociales. Fuente: IBM.", 
+                "section.frameworks": "Marcos y Gobernanza",
+                "frameworks.intro": "La ética efectiva de la IA requiere gobernanza, roles y responsabilidades claros, y valores corporativos integrados en el ciclo de vida de la IA. Fuente: IBM.", 
+                "frameworks.li1": "Definir roles y educar a las partes interesadas en el ciclo de vida de la IA.", 
+                "frameworks.li2": "Establecer procesos para gestionar, monitorear y comunicar sobre los riesgos de la IA.", 
+                "frameworks.li3": "Aplicar principios como la explicabilidad, la equidad, la privacidad y la robustez. Fuente: IBM.", 
+                "frameworks.title": "Gobernanza y Supervisión:",
+                "section.implementation": "Estrategias de Implementación",
+                "impl.li1": "Incorporar diversidad en los datos y auditorías para mitigar el sesgo.", 
+                "impl.li2": "Utilizar modelos transparentes y proporcionar documentación sobre cómo la IA toma decisiones.", 
+                "impl.li3": "Crear juntas de gobernanza para supervisar las prácticas éticas de la IA.", 
+                "impl.li4": "Proteger la privacidad del consumidor y darles control sobre sus datos.", 
+                "impl.li5": "Apoyar sistemas 'human-in-the-loop' para asegurar la supervisión de decisiones críticas.", 
+                "section.challenges": "Desafíos",
+                "challenges.li1": "La innovación está superando la regulación, lo que lleva a lagunas en la supervisión. Fuente: IBM.", 
+                "challenges.li2": "Equilibrar la precisión y la interpretabilidad sigue siendo difícil.", 
+                "challenges.li3": "Los estándares éticos globales varían, lo que complica la implementación.", 
+                "challenges.li4": "Medir la equidad, la responsabilidad y el impacto social es complejo.", 
+                "section.summary": "Resumen",
+                "summary.link": "Descargar resumen",
+                "footer.text": "2025 Investigación sobre IA Ética - basada en la información de IBM"
+            },
+            ru: {
+                "ui.language": "Язык:",
+                "page.title": "Исследование Этичного ИИ",
+                "header.title": "Этика ИИ",
+                "nav.home": "Главная",
+                "nav.issues": "Ключевые вопросы",
+                "nav.frameworks": "Принципы",
+                "nav.implementation": "Внедрение",
+                "nav.challenges": "Проблемы",
+                "nav.summary": "Сводка",
+                "nav.faq": "FAQ",
+                "nav.contact": "Контакт",
+                "nav.download": "Бесплатный отчёт",
+                "hero.download": "Скачать бесплатный отчёт по этике ИИ",
+                "hero.title": "Пионерская разработка ответственного ИИ",
+                "hero.subtitle": "Определение будущего технологий с этикой, прозрачностью и инклюзией в их основе.",
+                "hero.cta": "Изучить Ключевые Принципы",
+                "section.faq_title": "Часто задаваемые вопросы",
+                "faq.q1_title": "Что такое Объяснимый ИИ (XAI)?",
+                "faq.a1_text": "XAI относится к методам и техникам, которые позволяют пользователям-людям понимать, доверять и эффективно управлять результатами искусственного интеллекта. Он решает проблему 'черного ящика' сложных моделей ИИ.",
+                "faq.q2_title": "Как предвзятость попадает в систему ИИ?",
+                "faq.a2_text": "Предвзятость обычно попадает через обучающие данные, которые могут отражать общественные предрассудки, или через саму конструкцию системы ИИ, если она игнорирует определенные демографические группы.",
+                "faq.q3_title": "Каковы основные социальные последствия ИИ?",
+                "faq.a3_text": "Последствия включают изменения на рынке труда, сдвиги в экономическом неравенстве, влияние на демократические процессы и потенциальные вызовы автономии человека и социальным ценностям.",
+                "contact.title": "Присоединяйтесь",
+                "contact.subtitle": "У вас есть вопросы или вы хотите внести вклад в наши исследования? Воспользуйтесь формой ниже.",
+                "contact.name_label": "Имя",
+                "contact.email_label": "Адрес электронной почты",
+                "contact.message_label": "Сообщение",
+                "contact.checkbox_label": "Подписаться на нашу рассылку",
+                "contact.submit_btn": "Отправить Запрос",
+                "section.introduction": "Введение",
+                "intro.text": "Этика — это набор моральных принципов, которые помогают нам различать правильное и неправильное. Этика ИИ — это междисциплинарная область, изучающая, как оптимизировать благотворное влияние искусственного интеллекта (ИИ), снижая при этом риски и неблагоприятные последствия. Источник: IBM.",
+                "section.issues": "Ключевые Этические Вопросы",
+                "issue.data_privacy_title": "Ответственность за Данные и Конфиденциальность:",
+                "issue.data_privacy_text": "Использование больших наборов данных означает, что компании должны защищать личные данные и избегать наблюдения. Источник: IBM.", 
+                "issue.fairness_title": "Справедливость и Предвзятость:",
+                "issue.fairness_text": "Системы ИИ, обученные на предвзятых данных, могут увековечивать дискриминацию. Источник: IBM.", 
+                "issue.transparency_title": "Объяснимость и Прозрачность:",
+                "issue.transparency_text": "Модели ИИ должны быть понятны заинтересованным сторонам для построения доверия. Источник: IBM.", 
+                "issue.robustness_title": "Надежность и Подотчетность:",
+                "issue.robustness_text": "ИИ должен быть разработан, чтобы противостоять враждебному использованию и четко показывать, кто несет ответственность, когда что-то идет не так. Источник: IBM.", 
+                "issue.societal_title": "Социальное Влияние и Инклюзия:",
+                "issue.societal_text": "Внедрение ИИ влияет на рабочие места, равенство и социальные ценности. Источник: IBM.", 
+                "section.frameworks": "Принципы и Управление",
+                "frameworks.intro": "Эффективная этика ИИ требует управления, четких ролей и обязанностей, а также корпоративных ценностей, интегрированных в жизненный цикл ИИ. Источник: IBM.", 
+                "frameworks.li1": "Определите роли и обучайте заинтересованные стороны в жизненном цикле ИИ.", 
+                "frameworks.li2": "Установите процессы для управления, мониторинга и информирования о рисках ИИ.", 
+                "frameworks.li3": "Применяйте принципы, такие как объяснимость, справедливость, конфиденциальность и надежность. Источник: IBM.", 
+                "frameworks.title": "Управление и Надзор:",
+                "section.implementation": "Стратегии Внедрения",
+                "impl.li1": "Внедряйте разнообразие в данные и аудиты для смягчения предвзятости.", 
+                "impl.li2": "Используйте прозрачные модели и предоставляйте документацию о том, как ИИ принимает решения.", 
+                "impl.li3": "Создавайте советы по управлению для надзора за этическими практиками ИИ.", 
+                "impl.li4": "Защищайте конфиденциальность потребителей и давайте им контроль над их данными.", 
+                "impl.li5": "Поддерживайте системы 'человек в контуре' для обеспечения надзора за критическими решениями.", 
+                "section.challenges": "Проблемы",
+                "challenges.li1": "Инновации опережают регулирование, что приводит к пробелам в надзоре. Источник: IBM.", 
+                "challenges.li2": "Сложно соблюдать баланс между точностью и интерпретируемостью.", 
+                "challenges.li3": "Глобальные этические стандарты различаются, что усложняет внедрение.", 
+                "challenges.li4": "Измерение справедливости, подотчетности и социального воздействия является сложным.", 
+                "section.summary": "Сводка",
+                "summary.link": "Скачать сводку",
+                "footer.text": "2025 Исследование Этичного ИИ - на основе данных IBM"
+            },
+            fr: {
+                "ui.language": "Langue:",
+                "page.title": "Recherche sur l'IA Éthique",
+                "header.title": "IA Éthique",
+                "nav.home": "Accueil",
+                "nav.issues": "Questions Clés",
+                "nav.frameworks": "Cadres",
+                "nav.implementation": "Mise en œuvre",
+                "nav.challenges": "Défis",
+                "nav.summary": "Résumé",
+                "nav.faq": "FAQ",
+                "nav.contact": "Contact",
+                "hero.title": "Pionnier du Développement Responsable de l'IA",
+                "hero.subtitle": "Guider l'avenir de la technologie avec l'éthique, la transparence et l'inclusion en son cœur.",
+                "hero.cta": "Explorer les Principes Clés",
+                "section.faq_title": "Foire Aux Questions",
+                "faq.q1_title": "Qu'est-ce que l'Explicabilité de l'IA (XAI)?",
+                "faq.a1_text": "XAI fait référence aux méthodes et techniques qui permettent aux utilisateurs humains de comprendre, de faire confiance et de gérer efficacement les résultats de l'intelligence artificielle. Elle aborde le problème de la 'boîte noire' des modèles complexes d'IA.",
+                "faq.q2_title": "Comment le biais pénètre-t-il dans un système d'IA?",
+                "faq.a2_text": "Le biais pénètre généralement par les données d'entraînement, qui peuvent refléter des préjugés sociétaux, ou par la conception même du système d'IA, s'il néglige certains groupes démographiques.",
+                "faq.q3_title": "Quels sont les principaux impacts sociétaux de l'IA?",
+                "faq.a3_text": "Les impacts comprennent des changements sur le marché du travail, des variations dans l'inégalité économique, des effets sur les processus démocratiques et des défis potentiels à l'autonomie humaine et aux valeurs sociales.",
+                "contact.title": "S'Impliquer",
+                "contact.subtitle": "Vous avez des questions ou souhaitez contribuer à notre recherche? Utilisez le formulaire ci-dessous.",
+                "contact.name_label": "Nom",
+                "contact.email_label": "Adresse e-mail",
+                "contact.message_label": "Message",
+                "contact.checkbox_label": "S'abonner à notre newsletter",
+                "contact.submit_btn": "Soumettre la Demande",
+                "section.introduction": "Introduction",
+                "intro.text": "L'éthique est un ensemble de principes moraux qui nous aident à discerner le bien du mal. L'éthique de l'IA est un domaine multidisciplinaire qui étudie comment optimiser l'impact bénéfique de l'intelligence artificielle (IA) tout en réduisant les risques et les conséquences néfastes. Source : IBM.",
+                "section.issues": "Questions Éthiques Clés",
+                "issue.data_privacy_title": "Responsabilité des Données et Confidentialité:",
+                "issue.data_privacy_text": "L'utilisation de grands ensembles de données signifie que les entreprises doivent protéger les données personnelles et éviter la surveillance. Source : IBM.", 
+                "issue.fairness_title": "Équité et Biais:",
+                "issue.fairness_text": "Les systèmes d'IA entraînés sur des données biaisées peuvent perpétuer la discrimination. Source : IBM.", 
+                "issue.transparency_title": "Explicabilité et Transparence:",
+                "issue.transparency_text": "Les modèles d'IA doivent être compréhensibles pour les parties prenantes afin d'instaurer la confiance. Source : IBM.", 
+                "issue.robustness_title": "Robustesse et Responsabilité:",
+                "issue.robustness_text": "L'IA doit être conçue pour résister à une utilisation adverse et montrer clairement qui est responsable en cas de problème. Source : IBM.", 
+                "issue.societal_title": "Impact Sociétal et Inclusion:",
+                "issue.societal_text": "Le déploiement de l'IA influence les emplois, l'égalité et les valeurs sociales. Source : IBM.", 
+                "section.frameworks": "Cadres et Gouvernance",
+                "frameworks.intro": "L'éthique efficace de l'IA nécessite une gouvernance, des rôles et des responsabilités clairs, et des valeurs d'entreprise intégrées dans le cycle de vie de l'IA. Source : IBM.", 
+                "frameworks.li1": "Définir les rôles et éduquer les parties prenantes dans le cycle de vie de l'IA.", 
+                "frameworks.li2": "Établir des processus de gestion, de surveillance et de communication sur les risques de l'IA.", 
+                "frameworks.li3": "Appliquer des principes tels que l'explicabilité, l'équité, la confidentialité et la robustesse. Source : IBM.", 
+                "frameworks.title": "Gouvernance et Surveillance:",
+                "section.implementation": "Stratégies de Mise en œuvre",
+                "impl.li1": "Intégrer la diversité dans les données et les audits pour atténuer les biais.", 
+                "impl.li2": "Utiliser des modèles transparents et fournir de la documentation sur la manière dont l'IA prend des décisions.", 
+                "impl.li3": "Créer des conseils de gouvernance pour superviser les pratiques éthiques de l'IA.", 
+                "impl.li4": "Protéger la confidentialité des consommateurs et leur donner le contrôle de leurs données.", 
+                "impl.li5": "Soutenir les systèmes 'homme dans la boucle' pour assurer la surveillance des décisions critiques.", 
+                "section.challenges": "Défis",
+                "challenges.li1": "L'innovation dépasse la réglementation, ce qui crée des lacunes dans la surveillance. Source : IBM.", 
+                "challenges.li2": "Équilibrer la précision et l'interprétabilité reste difficile.", 
+                "challenges.li3": "Les normes éthiques mondiales varient, ce qui complique la mise en œuvre.", 
+                "challenges.li4": "Mesurer l'équité, la responsabilité et l'impact social est complexe.", 
+                "section.summary": "Résumé",
+                "summary.link": "Télécharger le résumé",
+                "footer.text": "2025 Recherche sur l'IA Éthique - basée sur les informations d'IBM"
+            }
+        };
+
+        const STORAGE_KEY = "site_lang";
+        const langSelect = document.getElementById("langSelect");
+        const i18nElements = document.querySelectorAll("[data-i18n-key]");
+
+        function applyTranslations(lang) {
+            const dict = MESSAGES[lang];
+            if (!dict) return;
+
+            document.documentElement.lang = lang;
+
+            i18nElements.forEach((el) => {
+                const key = el.getAttribute("data-i18n-key");
+                
+                // Użycie .textContent dla elementów, które powinny być przetłumaczone
+                // Sprawdzanie, czy element nie jest inputem
+                if (dict[key] !== undefined) {
+                    el.textContent = dict[key];
+                }
+            });
+
+            // Specjalna obsługa dla ikon (jeśli są) i innych elementów, które były w oryginalnym kodzie
+            if (lang === 'en') {
+                 // Przywracanie oryginalnych, nie-i18n elementów, jeśli są konieczne
+            }
+            
+            // Ponieważ użyliśmy .textContent dla wszystkich, dodamy z powrotem ikony do CTA
+            const ctaButton = document.querySelector('.btn-lg.custom-btn');
+            if (ctaButton) {
+                const icon = ctaButton.querySelector('i');
+                if (!icon) {
+                    ctaButton.innerHTML = `<i class="bi bi-lightbulb-fill me-2"></i>${ctaButton.textContent}`;
+                }
+            }
+            const submitButton = document.querySelector('.custom-btn-submit');
+            if (submitButton) {
+                const icon = submitButton.querySelector('i');
+                if (!icon) {
+                    submitButton.innerHTML = `<i class="bi bi-send-fill me-2"></i>${submitButton.textContent}`;
+                }
+            }
+            const navbarBrand = document.querySelector('.navbar-brand');
+            if (navbarBrand) {
+                const icon = navbarBrand.querySelector('i');
+                if (!icon) {
+                    navbarBrand.innerHTML = `<i class="bi bi-robot me-2"></i>${navbarBrand.textContent}`;
+                }
+            }
+
+
+            localStorage.setItem(STORAGE_KEY, lang);
+        }
+
+        function getInitialLang() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            return saved && MESSAGES[saved] ? saved : "en";
+        }
+
+        if (langSelect) {
+            langSelect.addEventListener("change", () => {
+                applyTranslations(langSelect.value);
+            });
+        }
+
+        const startLang = getInitialLang();
+        if (langSelect) {
+            langSelect.value = startLang;
+        }
+        applyTranslations(startLang);
+    </script>
+    
+  </body>
+</html>
